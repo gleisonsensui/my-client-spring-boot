@@ -1,1 +1,1 @@
-# my-client-spring-boot remote repository
+# my-client-spring-boot repository
