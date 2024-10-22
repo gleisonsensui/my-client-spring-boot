@@ -1,14 +1,15 @@
 package io.github.gleisonsensui.clients.model.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +24,9 @@ public class Client {
     @Column(name = "date_register")
     private LocalDate dateRegister;
 
+    @PrePersist
+    public  void prePersist() {
+        setDateRegister(LocalDate.now());
+    }
 
 }
