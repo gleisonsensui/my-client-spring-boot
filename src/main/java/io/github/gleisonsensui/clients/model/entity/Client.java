@@ -15,13 +15,13 @@ public class Client {
     private Integer id;
 
     @Column(nullable = false, length = 150)
-    private  String nome;
+    private  String name;
 
     @Column(nullable = false, length = 11)
     private  String cpf;
 
-    @Column
-    private LocalDate dataCadastro;
+    @Column(name = "date_register")
+    private LocalDate dateRegister;
 
 
 }
