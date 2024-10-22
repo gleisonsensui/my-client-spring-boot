@@ -1,10 +1,14 @@
 package io.github.gleisonsensui.clients.model.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
 @Entity
+@Data
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,4 +22,6 @@ public class Client {
 
     @Column
     private LocalDate dataCadastro;
+
+
 }
