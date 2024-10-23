@@ -1,5 +1,6 @@
 package io.github.gleisonsensui.clients.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +23,7 @@ public class Client {
     private  String cpf;
 
     @Column(name = "date_register")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dateRegister;
 
     @PrePersist
