@@ -22,7 +22,7 @@ public class Client {
     @Column(nullable = false, length = 11)
     private  String cpf;
 
-    @Column(name = "date_register")
+    @Column(name = "date_register", updatable = false)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dateRegister;
 
